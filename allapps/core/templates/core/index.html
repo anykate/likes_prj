@@ -1,0 +1,36 @@
+{% extends '_base.html' %}
+{% load static %}
+
+{% block title %}Core - Home{% endblock %}
+
+{% block content %}
+	<div class="container">
+		<!-- Heading starts -->
+		<div class="row">
+			<div class="col-12">
+				<h1 class="text-center">Like Button Counter</h1>
+			</div>
+		</div>
+		<!-- Heading ends -->
+
+		<!-- Section starts -->
+		<div class="row mt-4 text-center">
+			<div class="col-md-6">
+				<div class="likes_text bg-info text-white display-4">Likes</div>
+			</div>
+			<div class="col-md-6">
+				<div class="likes_val bg-info text-white display-4">0</div>
+			</div>
+		</div>
+		<!-- Section ends -->
+
+		<!-- Section starts -->
+		<div class="row mt-5 text-center">
+			<div class="col-12">
+				{% csrf_token %}
+				<button type="button" id="genbutton" class="btn btn-lg btn-dark btn-block">Click ME!</button>
+			</div>
+		</div>
+		<!-- Section ends -->
+	</div>
+{% endblock %}
